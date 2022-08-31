@@ -16,13 +16,13 @@ client에서 post로 보내준 데이터)들을 자동으로 파싱해주어서,
 // 클라이언트에서 http 요청 메소드 중 get을 이용해서
 // 'host:port'로 요청을 보내면 실행되는 라우트
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/cal.html");
+    res.sendFile(__dirname + "/calcu.html");
   });
 app.post('/', (req, res) => {
-    let num1 = Number(req.body.num1);
-    let num2 = Number(req.body.num2);
-    let result = num1+num2;
-    res.send("연산의 결과 : "+result);
+    // let num1 = Number(req.body.num1);
+    // let num2 = Number(req.body.num2);
+    // let result = num1+num2;
+    res.sendFile(__dirname+"/calcu.js");
   });
 
 // app.listen()함수를 사용해서 서버 실행
