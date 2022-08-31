@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcu2</title>
+</head>
+<body>
+    <h4>계산기 #2</h4>
+
+    <form>
+      a: <input type="text" id="number1" placeholder="첫번째 숫자"><br>
+      <select id="operator">
+        <option value="plus">더하기</option>
+        <option value="minus">빼기</option>
+        <option value="multiply" selected>곱하기</option>
+        <option value="divide">나누기</option>
+      </select><br>
+      b: <input type="text" id="number2" placeholder="두번째 숫자"><br>
+      <input type="button" id="operation" value="계산하기"><br>
+    </form>
+    
+    <p id="result">연산 결과: </p>
+    
+    <script>
+        document.getElementById("operation").addEventListener("click", calc);
+        
+        function calc() {
+            a = Number(document.getElementById("number1").value);
+            b = Number(document.getElementById("number2").value);
+    
+            opr = document.getElementById("operator").value;
+    
+            if (opr == "plus") text = a + b;
+            else if (opr == "minus") text = a - b;
+            else if (opr == "multiply") text = a * b;
+            else text = a / b;
+    
+            document.getElementById("result").innerHTML = "답: " + text;
+        }
+    </script>
+    
+    </body>
+    </html>  
